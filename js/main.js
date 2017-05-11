@@ -2,7 +2,6 @@ function LinkedList() {
   var ll = this;
   ll.head = null;
   ll.tail = null;
-  console.log(ll);
 }
 
 function Node(value, next, prev) {
@@ -10,7 +9,6 @@ function Node(value, next, prev) {
   node.value = value;
   node.next = next;
   node.prev = prev;
-  console.log(node);
 }
 
 LinkedList.prototype.addToHead = function(value) {
@@ -22,5 +20,23 @@ LinkedList.prototype.addToHead = function(value) {
 
 var ll = new LinkedList();
 
-ll.addToHead(100);
+/*ll.addToHead(100);
 ll.addToHead(200);
+ll.addToHead(300);*/
+
+LinkedList.prototype.addToTail = function(value) {
+  var ll = this;
+  var newNode = new Node(value, null, ll.tail);
+  if (ll.tail) ll.tail.next = newNode;
+  else ll.head = newNode;
+  ll.tail = newNode;
+};
+
+var myLL = new LinkedList();
+myLL.addToTail(10);
+myLL.addToTail(20);
+myLL.addToTail(30);
+
+console.log('Head value: ' + myLL.head.value);
+console.log('Next value :' + myLL.head.next.value);
+console.log('Tail value :' + myLL.tail.value);

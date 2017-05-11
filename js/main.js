@@ -1,13 +1,26 @@
 function LinkedList() {
-  this.head = null;
-  this.tail = null;
+  var ll = this;
+  ll.head = null;
+  ll.tail = null;
+  console.log(ll);
 }
 
 function Node(value, next, prev) {
-  this.value = value;
-  this.next = next;
-  this.prev = prev;
+  var node = this;
+  node.value = value;
+  node.next = next;
+  node.prev = prev;
+  console.log(node);
 }
 
-var node1 = new Node(100, 'node2', null);
-console.log(node1);
+LinkedList.prototype.addToHead = function(value) {
+  var newNode = new Node(value, this.head, null);
+  if (this.head) this.head.prev = newNode;
+  else this.tail = newNode;
+  this.head = newNode;
+};
+
+var ll = new LinkedList();
+
+ll.addToHead(100);
+ll.addToHead(200);

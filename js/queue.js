@@ -14,7 +14,7 @@ Queue.prototype.enqueue = function  (value) {
     return this.count();
   }
   return 'Max capacity already reached. Remove element before adding a new one.';
-}
+};
 
 // O(1)
 Queue.prototype.dequeue = function  () {
@@ -22,17 +22,17 @@ Queue.prototype.dequeue = function  () {
   delete this._storage[this._head];
   if (this._head < this._tail) this._head++;
   return element;
-}
+};
 
 // O(1)
 Queue.prototype.peek = function  () {
   return this._storage[this._head];
-}
+};
 
 // O(1)
 Queue.prototype.count = function  () {
   return this._tail - this._head;
-}
+};
 
 // O(n)
 Queue.prototype.contains = function  (value) {
@@ -40,14 +40,14 @@ Queue.prototype.contains = function  (value) {
     if (this._storage[i] === value) return true;
   }
   return false;
-}
+};
 
 Queue.prototype.until = function  (value) {
   for (var i = this._head; i < this._tail; i++) {
     if (this._storage[i] === value) return i - this._head + 1;
   }
   return null;
-}
+};
 
 var myQueue = new Queue(3);
 console.log(myQueue);

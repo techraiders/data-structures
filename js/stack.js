@@ -13,7 +13,7 @@ Stack.prototype.push = function  (value) {
     return this._count;
   }
   return 'Max capacity already reached. Remove element before adding a new one.';
-}
+};
 
 // O(1)
 Stack.prototype.pop = function  (value) {
@@ -28,17 +28,17 @@ Stack.prototype.pop = function  (value) {
     this._count = 0;
   };
   return value;
-}
+};
 
 // O(1)
 Stack.prototype.peek = function  () {
   return this._storage[this._count - 1];
-}
+};
 
 // O(1)
 Stack.prototype.count = function  () {
   return this._count;
-}
+};
 
 // var myStack = new Stack(3);
 // console.log(myStack.push('a'), 'should be 1');
@@ -76,7 +76,7 @@ MinStack.prototype.push = function  (value) {
     return this._count;
   }
   return 'Max capacity already reached. Remove element before adding a new one.';
-}
+};
 
 // O(1)
 MinStack.prototype.pop = function  () {
@@ -87,22 +87,22 @@ MinStack.prototype.pop = function  () {
     this._count = 0;
   }
   return value;
-}
+};
 
 // O(1)
 MinStack.prototype.peek = function  () {
   return this._storage[this._count - 1];
-}
+};
 
 // O(1)
 MinStack.prototype.count = function  () {
   return this._count;
-}
+};
 
 // O(1)
 MinStack.prototype.min = function  () {
   return this._min.peek();
-}
+};
 
 var minstack = new MinStack(5);
 console.log(minstack);

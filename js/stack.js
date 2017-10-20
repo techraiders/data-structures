@@ -64,7 +64,27 @@ MinStack.prototype.push = function  (value) {
   if (this._count < this._capacity) {
     
     // Determines the lower value and sets at
-    // the top of the Stack of min property. 
+    // the top of the Stack of min property.     
+
+    /* Keeping track of current minimun value in a stack 
+      var myMinStack = new MinStack();
+      myMinStack.push(6);
+      -- storage [6],
+      -- min [6]
+
+      myMinStack.push(23);
+      -- storage [6, 23],
+      -- min [6, 6]
+
+      myMinStack.push(9)
+      -- storage [6, 23, 9, 5]
+      -- min [6, ,6, ,6 ,5]
+
+      myMinStack.push(5)
+      -- storage [6, 23, 9, 5]
+      -- min [6, 6, 6, 5]
+      Keeping track of current minimun value in a stack  */
+
     if (this._min.peek() < value) {
       this._min.push(this._min.peek());
     } else {

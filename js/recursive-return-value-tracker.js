@@ -24,13 +24,13 @@ var callMe = function  () { // 2nd definition
 	if (tracker === 3) {
 		return 'loops';
 	}
-	callMe('anytime'); // 3rd call
+	callMe('anytime'); // 3rd call EVALUATES to 'loops'
 };
-var callMe = function  () { // 3rd definition
+/*var callMe = function  () { // 3rd definition
 	tracker++; // 3
 	if (tracker === 3) { // true
 		return 'loops'; // returns 'loops'
 	}
 	callMe('anytime'); // not invoked
-};
+};*/
 /* CALL STACK */

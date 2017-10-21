@@ -6,10 +6,10 @@ var callMe = function  () {
 	if (tracker === 3) {
 		return 'loops';
 	}
-	callMe('anytime');
+	callMe('anytime'); // returns undefined
 };
 
-callMe(); // First call
+//callMe(); // First call
 
 /* CALL STACK */
 /*var callMe = function  () { // 1st definition 
@@ -18,13 +18,14 @@ callMe(); // First call
 		return 'loops';
 	}
 	callMe('anytime'); // 2nd call
+	// returns undefined by default
 };
 var callMe = function  () { // 2nd definition
 	tracker++; // 2
 	if (tracker === 3) {
 		return 'loops';
 	}
-	callMe('anytime'); // 3rd call EVALUATES to 'loops'
+	callMe('anytime'); // 3rd call EVALUATES to 'loops' but by default returns undefined.
 };
 var callMe = function  () { // 3rd definition
 	tracker++; // 3

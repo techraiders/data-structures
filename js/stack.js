@@ -86,7 +86,8 @@ MinStack.prototype.push = function  (value) {
       Keeping track of current minimun value in a stack  */
 
     if (this._min.peek() < value) {
-      this._min.push(this._min.peek());
+      this._min.push(this._min.peek()); // How about having the position of minimum value instead of
+      //duplicating the minimum value in a separate stack
     } else {
       this._min.push(value);
     }

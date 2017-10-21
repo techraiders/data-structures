@@ -12,14 +12,14 @@ var callMe = function  () {
 callMe(); // First call
 
 /* CALL STACK */
-var callMe = function  () { // 1st definition 
+/*var callMe = function  () { // 1st definition 
 	tracker++; //1
 	if (tracker === 3) {
 		return 'loops';
 	}
 	callMe('anytime'); // 2nd call
 };
-/*var callMe = function  () { // 2nd definition
+var callMe = function  () { // 2nd definition
 	tracker++; // 2
 	if (tracker === 3) {
 		return 'loops';

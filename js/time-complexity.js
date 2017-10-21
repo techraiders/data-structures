@@ -16,3 +16,21 @@ for (var i...) { O(n)
 		5 + 6; O(1)
 	}
 } O(n^2) * O(2) // constant time is minimal in comparison of big input size, so ignored; final time complexity is: O(n^2)
+
+// O(n)
+var countChars = function  (str) {
+	var count = 0; // constant
+	for (var i = 0; i < str.length; i++) {
+		count++; //constant
+	}
+	return count; // constant
+};
+countChars('dance');
+countChars('walk');
+
+// O(1)
+var countChars = function  (str) {
+	return str.length;
+};
+countChars('dance');
+countChars('walk');

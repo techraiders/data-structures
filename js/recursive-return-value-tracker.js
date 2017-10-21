@@ -19,14 +19,14 @@ var callMe = function  () { // 1st definition
 	}
 	callMe('anytime'); // 2nd call
 };
-var callMe = function  () { // 2nd definition
+/*var callMe = function  () { // 2nd definition
 	tracker++; // 2
 	if (tracker === 3) {
 		return 'loops';
 	}
 	callMe('anytime'); // 3rd call EVALUATES to 'loops'
 };
-/*var callMe = function  () { // 3rd definition
+var callMe = function  () { // 3rd definition
 	tracker++; // 3
 	if (tracker === 3) { // true
 		return 'loops'; // returns 'loops'

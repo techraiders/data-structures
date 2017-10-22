@@ -1,0 +1,18 @@
+/* Pseudocode: Merge Sort
+mergeSort(list)
+base case: if list.length < 2, return
+break the list into halves L & R
+Lsorted = mergeSort(L)
+Rsorted = mergeSort(R)
+return merge(Lsorted, Rsorted) */
+
+/* IN MORE DETAILS
+mergeSort(list)
+initialize n to the length of the list
+base case is if n < 2, just return
+initialize mid to n/2
+left = left slice of array to mid - 1
+right = right slice of array to n - 1
+mergeSort(left)
+mergeSort(right)
+return merge(left, right) */

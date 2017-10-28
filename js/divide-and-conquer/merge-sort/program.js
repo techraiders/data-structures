@@ -1,3 +1,6 @@
+'use strict';
+
+// O(n*logn)
 function mergeSortRecursive (array) {
 	// base case
 	if (array.length <= 1) return array;
@@ -13,6 +16,7 @@ function mergeSortRecursive (array) {
 	return merge(leftSorted, rightSorted);
 }
 
+// O(n*logn)
 function mergeSortIterative (array) {
 	// create array of subarrays with each element
 	var splitArr = array.map(function  (element) {
@@ -20,11 +24,12 @@ function mergeSortIterative (array) {
 	});
 
 	// While there is more than one subarray
-	while (splitArr.length > 1) {
+	while (splitArr.length > 1) { // linear
 		var result = [];
 		// merge adjacent
-		for (var i = 0; i < splitArr.length; i+=2) {
-			// for pairs merge
+		for (var i = 0; i < splitArr.length; i+=2) { // O(logn)
+			// for pairs merge; if element exists on the next index, combine current and
+			// next combine those into a new array and push into result.
 			if (splitArr[i+1]) result.push(merge(splitArr[i], splitArr[i+1]));
 			// for last odd element, just add to results
 			else result.push(splitArr[i]); 
@@ -34,6 +39,8 @@ function mergeSortIterative (array) {
 	}
 	return splitArr[0];
 }
+
+window.onload = mergeSortIterative([1,3,6,3,6,8]);
 
 function merge (left, right) {
 	var result = [], iLeft = 0, iRight = 0;

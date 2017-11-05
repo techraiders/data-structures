@@ -1,1 +1,5 @@
 http://slides.com/bgando/sorting/
+
+STABLE: Preserve the original order for items of the same value
+
+ADAPTIVE: Becomes more efficient when the list is nearly sorted

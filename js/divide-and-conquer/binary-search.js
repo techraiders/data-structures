@@ -1,3 +1,5 @@
+// O (n log n)
+
 function binarySearch (list, value) {
   // initial values for start, middle and end
   var start = 0,

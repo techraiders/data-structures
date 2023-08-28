@@ -12,7 +12,7 @@ const maxSubArraySum = (arr, num) => {
         currentSum += arr[i] - arr[i-num];
         sum = Math.max(sum, currentSum);
     }
-    return currentSum;
+    return sum;
    } else {
        return null;
    }

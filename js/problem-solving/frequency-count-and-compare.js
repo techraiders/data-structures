@@ -1,4 +1,5 @@
 const validAnagram = (first, second) => {
+   // compares frequency of elements in two inputs
     if (first.length === second.length) {
         const frequency = {};
         for (let char of first) {

@@ -1,4 +1,7 @@
-const sumZero = (arr) => {
+/**
+ * Requires sorted array
+ */
+const sumZero = arr => {
     let left = 0, right = arr.length -1;
     while (left < right) {
         let sum = arr[left] + arr[right];

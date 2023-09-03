@@ -23,6 +23,7 @@ const merge = (first, second) => {
 };
 
 const mergeSort = input => {
+  // Time complexity: O(nlogn)
   if (input.length < 2) return input;
   let mid = Math.floor(input.length/2);
   let left = mergeSort(input.slice(0, mid));

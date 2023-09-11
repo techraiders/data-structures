@@ -34,6 +34,7 @@ const backspaceCompare = (S,T) => {
   return true;
 };
 
+
 // S: "abc#d"; T: "abzz##d";
 
 backspaceCompare("abc#d", "abzz##d");
